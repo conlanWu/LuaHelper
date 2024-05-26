@@ -30,6 +30,8 @@ func (p *Parser) parseStat() ast.Stat {
 		return p.parseEmptyStat()
 	case lexer.TkKwBreak:
 		return p.parseBreakStat()
+	case lexer.TkKwContinue:
+		return p.parseContinueStat()
 	case lexer.TkSepLabel:
 		return p.parseLabelStat()
 	case lexer.TkKwGoto:
@@ -66,6 +68,15 @@ func (p *Parser) parseBreakStat() *ast.BreakStat {
 	p.l.NextTokenKind(lexer.TkKwBreak)
 
 	return &ast.BreakStat{
+		//Loc: l.GetNowTokenLoc(),
+	}
+}
+
+// continue
+func (p *Parser) parseContinueStat() *ast.ContinueStat {
+	p.l.NextTokenKind(lexer.TkKwContinue)
+
+	return &ast.ContinueStat {
 		//Loc: l.GetNowTokenLoc(),
 	}
 }

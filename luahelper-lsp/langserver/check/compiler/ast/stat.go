@@ -10,6 +10,7 @@ stat ::=  ‘;’ |
 	 functioncall |
 	 label |
 	 break |
+	 continue |
 	 goto Name |
 	 do block end |
 	 while exp do block end |
@@ -32,6 +33,12 @@ type EmptyStat struct{} // ‘;’
 // break
 type BreakStat struct {
 	//Loc lexer.LocInfo
+}
+
+// ContinueStat continue 语句
+// continue
+type ContinueStat struct {
+	// Loc Lexer.LocInfo
 }
 
 // LabelStat goto对应的标识符

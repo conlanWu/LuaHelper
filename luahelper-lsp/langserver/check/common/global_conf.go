@@ -406,6 +406,7 @@ func (g *GlobalConfig) IntialGlobalVar() {
 	g.CompKeyMap["and"] = true
 	g.CompKeyMap["break"] = true
 	g.CompKeyMap["::"] = true
+	g.CompKeyMap["continue"] = true
 
 	g.CompKeyMap["end"] = true
 	g.CompKeyMap["goto"] = true

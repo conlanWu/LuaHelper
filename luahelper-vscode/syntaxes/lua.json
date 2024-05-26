@@ -158,7 +158,7 @@
             ]
         },
         {
-            "match": "\\b(break|do|else|for|if|elseif|goto|return|then|repeat|while|until|end|function|local|in|and|or|not)\\b",
+            "match": "\\b(break|continue|do|else|for|if|elseif|goto|return|then|repeat|while|until|end|function|local|in|and|or|not)\\b",
             "name": "keyword.control.lua"
         },
         {

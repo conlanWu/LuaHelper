@@ -36,6 +36,8 @@ func (a *Analysis) cgStat(node ast.Stat) {
 		a.cgGotoStat(stat)
 	case *ast.BreakStat:
 		a.cgBreakStat(stat)
+	case *ast.ContinueStat:
+		a.cgContinueStat(stat)
 	}
 }
 
@@ -123,6 +125,9 @@ func (a *Analysis) cgFuncCallParamCheck(node *ast.FuncCallStat) {
 }
 
 func (a *Analysis) cgBreakStat(node *ast.BreakStat) {
+}
+
+func (a *Analysis) cgContinueStat(node *ast.ContinueStat) {
 }
 
 func (a *Analysis) cgDoStat(node *ast.DoStat) {

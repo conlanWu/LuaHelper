@@ -46,6 +46,7 @@ const (
 	TkOpOr                          // or
 	TkOpNot                         // not
 	TkKwBreak                       // break
+	TkKwContinue 					// continue
 	TkKwDo                          // do
 	TkKwElse                        // else
 	TkKwElseif                      // elseif
@@ -114,6 +115,7 @@ var tokenKinds = [...]string{
 	TkOpOr:       "or",             // or
 	TkOpNot:      "not",            // not
 	TkKwBreak:    "break",          // break
+	TkKwContinue: "continue", 		// continue
 	TkKwDo:       "do",             // do
 	TkKwElse:     "else",           // else
 	TkKwElseif:   "elseif",         // elseif
@@ -151,6 +153,7 @@ func (tok TkKind) String() string {
 var keywords = map[string]TkKind{
 	"and":      TkOpAnd,
 	"break":    TkKwBreak,
+	"continue": TkKwContinue,
 	"do":       TkKwDo,
 	"else":     TkKwElse,
 	"elseif":   TkKwElseif,
